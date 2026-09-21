@@ -24,7 +24,7 @@
    * Сюда вставляется ссылка на веб-приложение Google Apps Script (см. FORM.md).
    * Пока строка пустая, форма работает «вхолостую»: показывает успех, но никуда не отправляет.
    */
-  var FORM_URL = 'https://script.google.com/macros/s/AKfycbyaPGTGiDiwK4b6j6fcLQLLvcmXCwOlOC5IBa4jcwq0DU_s5YLadzfgY5lUEJMw6CUYZw/exec';
+  var FORM_URL = 'https://script.google.com/macros/s/AKfycbz4JzBKgZBL2XwA6t-4RotfPZB-VbdGS8y2OVB0_0OtRvjtCxSVZ2YAOg28W4vRjo1z/exec';
 
   function loadPhoto(el, src) {
     if (!el) return;
