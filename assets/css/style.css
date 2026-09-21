@@ -15,6 +15,7 @@
   --copper: #C98A5E;
   --copper-hover: #B97A4F;
   --copper-text: #9A5B32;  /* медь для мелкого текста на светлом (контраст AA) */
+  --ok: #4F8F63;           /* приглушённый зелёный: только галочка «заявка отправлена» */
 
   --f-display: 'IBM Plex Sans Condensed', 'Noto Sans Armenian', 'Arial Narrow', sans-serif;
   --f-body: 'IBM Plex Sans', 'Noto Sans Armenian', system-ui, sans-serif;
@@ -1096,7 +1097,47 @@ html:not(.js) .hero-gp [data-gp-fallback] { display: block; }
 .field--hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 /* сообщение «не отправилось» под кнопкой */
 .form__note { margin-top: 16px; color: #A3372B; font-size: 12px; line-height: 1.5; }
-.btn.is-busy { opacity: .65; pointer-events: none; }
+.btn.is-busy { pointer-events: none; }
+
+/* Отправка и успех — поверх всей карточки формы. Срез угла берём у карточки,
+   чтобы слой повторял её форму. */
+.form__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  background: rgba(243, 242, 240, .72);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  clip-path: var(--glass-clip);
+  animation: menuIn .25s var(--ease);
+}
+.form__overlay[hidden] { display: none; }
+.form__overlay > * { grid-area: 1 / 1; }
+.form__spin {
+  width: 62px;
+  height: 62px;
+  border: 3px solid rgba(38, 55, 63, .18);
+  border-top-color: var(--copper);
+  border-radius: 50%;
+  animation: btnSpin .8s linear infinite;
+}
+.form__check {
+  width: 62px;
+  height: 62px;
+  display: none;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--ok);
+  color: #fff;
+  animation: okPop .4s var(--ease) both;
+}
+.form__check svg { width: 30px; height: 30px; fill: none; stroke: currentColor; stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round; }
+.form__overlay.is-done .form__spin { display: none; }
+.form__overlay.is-done .form__check { display: grid; }
+@keyframes btnSpin { to { transform: rotate(360deg); } }
+@keyframes okPop { from { opacity: 0; transform: scale(.6); } }
 
 .contact__card {
   align-self: start;
@@ -1134,7 +1175,8 @@ html:not(.js) .hero-gp [data-gp-fallback] { display: block; }
   mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
   padding: 1px;
 }
-.contact__card > * { position: relative; z-index: 1; }
+/* Контент поднимаем над стеклянными слоями; слой отправки исключаем — он absolute */
+.contact__card > *:not(.form__overlay) { position: relative; z-index: 1; }
 .form__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 28px; margin-bottom: 36px; }
 .field { display: grid; gap: 6px; align-content: start; }
 .field--full { grid-column: 1 / -1; }
@@ -1198,11 +1240,6 @@ html:not(.js) .hero-gp [data-gp-fallback] { display: block; }
 
 .form button[type="submit"][disabled] { opacity: .7; cursor: progress; }
 
-.form__success { padding-block: 24px; animation: menuIn .6s var(--ease); }
-.form__success-icon { width: 64px; height: 64px; display: grid; place-items: center; background: var(--copper); color: var(--ink); margin-bottom: 28px; }
-.form__success-icon svg { width: 30px; height: 30px; stroke-width: 2.4; }
-.form__success h3 { font: 700 clamp(32px, 3.4vw, 48px)/1 var(--f-display); text-transform: uppercase; color: var(--ink); margin-bottom: 16px; }
-.form__success p { max-width: 44ch; margin-bottom: 32px; }
 
 /* =========================================================
    FOOTER

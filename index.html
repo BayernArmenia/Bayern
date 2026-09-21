@@ -607,11 +607,12 @@
               <p class="form__note mono" role="alert" hidden></p>
             </form>
 
-            <div class="form__success" hidden>
-              <span class="form__success-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
-              <h3 data-i18n="contact.successTitle"></h3>
-              <p data-i18n="contact.successText"></p>
-              <button type="button" class="link" data-form-again><span data-i18n="contact.again"></span> →</button>
+            <!-- Отправка и успех показываются поверх карточки: форма остаётся на месте,
+                 поэтому карточка не меняет высоту и карта слева не схлопывается. -->
+            <div class="form__overlay" hidden>
+              <span class="form__spin" aria-hidden="true"></span>
+              <span class="form__check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+              <span class="sr-only" role="status" data-i18n="contact.successTitle"></span>
             </div>
           </div>
         </div>

@@ -352,7 +352,8 @@
     var form = $('#contactForm');
     if (!form) return;
     var card = form.closest('.contact__card');
-    var success = $('.form__success', card);
+    var overlay = $('.form__overlay', card);
+    var overlayTimer = null;
     var submitBtn = $('button[type="submit"]', form);
     var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
@@ -414,17 +415,25 @@
       submitBtn.disabled = true;
       submitBtn.classList.add('is-busy');
       showFormError('');
+      clearTimeout(overlayTimer);
+      overlay.classList.remove('is-done');
+      overlay.hidden = false;
 
       function done() {
         submitBtn.disabled = false;
         submitBtn.classList.remove('is-busy');
         form.reset();
-        form.hidden = true;
-        success.hidden = false;
+        $$('.field.is-invalid', form).forEach(function (f) { f.classList.remove('is-invalid'); });
+        // Спиннер сменяется зелёной галочкой, через 2 секунды слой уходит —
+        // под ним уже пустая форма, готовая к следующей заявке.
+        overlay.classList.add('is-done');
+        overlayTimer = setTimeout(function () { overlay.hidden = true; overlay.classList.remove('is-done'); }, 2000);
       }
       function failed() {
         submitBtn.disabled = false;
         submitBtn.classList.remove('is-busy');
+        overlay.hidden = true;
+        overlay.classList.remove('is-done');
         showFormError('contact.failed');
       }
 
@@ -437,11 +446,6 @@
         .catch(function (err) { console.error('[form] не отправлено:', err); failed(); });
     });
 
-    $('[data-form-again]', card).addEventListener('click', function () {
-      success.hidden = true;
-      form.hidden = false;
-      form.elements.name.focus();
-    });
   }
 
   /* ---------------- Каталог (заглушка) ---------------- */
