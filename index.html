@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BAYERN — Quality First</title>
+  <meta name="description" content="BAYERN — official representative of Weber MT, ENAR, Ofmer, Geda, IMER and Hatz in Armenia. Equipment, service, spare parts and operator training.">
+  <meta name="theme-color" content="#4E6B78">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+Armenian:wdth,wght@62.5..100,400..700&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home">
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="nav__logo" href="#top" aria-label="BAYERN"></a>
+
+      <nav class="nav__links" aria-label="Main">
+        <a href="#about" data-i18n="nav.about">Մեր մասին</a>
+        <a href="#industries" data-i18n="nav.industries">Ոլորտներ</a>
+        <a href="#brands" data-i18n="nav.brands">Բրենդներ</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a class="btn btn--copper nav__cta" href="#contact"><span data-i18n="nav.cta">Հայցել առաջարկ</span></a>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" class="lang__btn" data-lang="hy">HY</button>
+          <button type="button" class="lang__btn" data-lang="en">EN</button>
+          <button type="button" class="lang__btn" data-lang="ru">RU</button>
+        </div>
+        <button type="button" class="nav__burger" aria-expanded="false" aria-controls="mobileMenu" data-i18n-aria="nav.menu" aria-label="Menu">
+          <span class="mark" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <nav class="container mobile-menu__links" aria-label="Mobile">
+      <a href="#about"><span class="mono">01</span><span data-i18n="nav.about">Մեր մասին</span></a>
+      <a href="#industries"><span class="mono">02</span><span data-i18n="nav.industries">Ոլորտներ</span></a>
+      <a href="#brands"><span class="mono">03</span><span data-i18n="nav.brands">Բրենդներ</span></a>
+    </nav>
+    <div class="container mobile-menu__foot">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" class="lang__btn" data-lang="hy">HY</button>
+        <button type="button" class="lang__btn" data-lang="en">EN</button>
+        <button type="button" class="lang__btn" data-lang="ru">RU</button>
+      </div>
+      <a class="btn btn--copper" href="#contact"><span data-i18n="nav.cta">Հայցել առաջարկ</span></a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <!-- HERO — Glyph Portal: белый логотип на фото; при скролле камера входит в среднюю полосу E → About (assets/js/glyph-portal.js) -->
+    <section class="gp hero-gp" id="top" data-gp aria-label="BAYERN — Quality First">
+      <div data-gp-viewport aria-hidden="true"></div>
+
+      <div data-gp-pin>
+        <!-- Фото: assets/img/photos/hero/hero.jpg (подставится само, см. assets/img/photos/README.md) -->
+        <div class="hero__photo" aria-hidden="true" data-photo="assets/img/photos/hero/hero.jpg">
+          <span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph">Լուսանկար</span>&nbsp;· Hero 2400×1350</span>
+        </div>
+        <div class="hero__shade" aria-hidden="true"></div>
+
+        <!-- Белое поле внутри контура логотипа = фон секции About -->
+        <div data-gp-field aria-hidden="true" inert></div>
+
+        <svg data-gp-art aria-hidden="true" focusable="false">
+          <defs>
+            <clipPath id="heroLogoClip" clipPathUnits="userSpaceOnUse">
+              <path data-gp-glyph d="" />
+            </clipPath>
+          </defs>
+          <g data-gp-marks style="visibility: hidden"><path /></g>
+        </svg>
+
+        <div data-gp-choices role="radiogroup" inert></div>
+        <label data-gp-touch-picker hidden>
+          <span data-gp-sr class="sr-only"></span>
+          <select data-gp-select></select>
+        </label>
+
+        <!-- Без JS: обычный логотип -->
+        <img data-gp-fallback src="assets/img/logo-white.png" width="2877" height="749" alt="">
+
+        <div data-gp-front>
+          <div class="container hero__inner">
+            <p class="hero__eyebrow mono"><span class="mark mark--sm" aria-hidden="true"></span><span data-i18n="hero.eyebrow">Պաշտոնական ներկայացուցիչ Հայաստանում</span></p>
+            <div class="hero__bottom">
+              <!-- Подсказка «листайте вниз»: клик уводит к «О компании», гаснет вместе с первым кадром -->
+              <a class="hero__scroll" href="#about">
+                <span class="sr-only" data-i18n="nav.about"></span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7l8 8 8-8"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7l8 8 8-8"/></svg>
+              </a>
+              <h1 class="hero__title" data-i18n="hero.title">Եվրոպական տեխնիկա՝ պաշտոնական երաշխիքով</h1>
+              <p class="hero__text" data-i18n="hero.text"></p>
+              <ul class="hero__stats">
+                <li><b>9</b><span data-i18n="hero.s1">եվրոպական բրենդ</span></li>
+                <li><b>5</b><span data-i18n="hero.s2">արտադրող երկիր</span></li>
+                <li><b>EVN</b><span data-i18n="hero.s3">պահեստ և սպասարկում Երևանում</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div data-gp-caption>
+          <span data-gp-hint aria-hidden="true"></span>
+          <a data-gp-enter href="#about"><span data-i18n="gp.enter">Մտնել ներս</span><span aria-hidden="true">↘</span></a>
+        </div>
+      </div>
+
+      <div data-gp-content>
+        <!-- ============ ABOUT ============ -->
+        <section class="about section" id="about">
+          <div class="container about__grid">
+            <div class="about__collage">
+              <figure class="ph ph--steel about__p1 reveal" data-photo="assets/img/photos/about/about-1.jpg">
+                <figcaption class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="about.photo1"></span></figcaption>
+              </figure>
+              <figure class="ph ph--sand about__p2 reveal" style="--d:.12s" data-photo="assets/img/photos/about/about-2.jpg">
+                <figcaption class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="about.photo2"></span></figcaption>
+              </figure>
+              <figure class="ph ph--concrete about__p3 reveal" style="--d:.24s" data-photo="assets/img/photos/about/about-3.jpg">
+                <figcaption class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="about.photo3"></span></figcaption>
+              </figure>
+              <div class="about__badge reveal" style="--d:.36s">
+                <span class="mark" aria-hidden="true"></span>
+                <span class="mono">Quality first</span>
+              </div>
+            </div>
+
+            <div class="about__text">
+              <p class="label reveal" data-i18n="about.label"></p>
+              <h2 class="h2 reveal" data-i18n="about.title"></h2>
+              <p class="lead reveal" data-i18n="about.lead"></p>
+              <dl class="about__mv reveal">
+                <div>
+                  <dt class="mono" data-i18n="about.missionLabel"></dt>
+                  <dd data-i18n="about.mission"></dd>
+                </div>
+                <div>
+                  <dt class="mono" data-i18n="about.visionLabel"></dt>
+                  <dd data-i18n="about.vision"></dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <div class="container">
+            <ul class="values">
+              <li class="value reveal">
+                <img class="value__art" src="assets/img/values/value-1.jpg" alt="" loading="lazy" decoding="async">
+                <span class="value__num mono">01</span>
+                <h3 data-i18n="value.1.title"></h3>
+                <p data-i18n="value.1.text"></p>
+              </li>
+              <li class="value reveal" style="--d:.08s">
+                <img class="value__art" src="assets/img/values/value-2.jpg" alt="" loading="lazy" decoding="async">
+                <span class="value__num mono">02</span>
+                <h3 data-i18n="value.2.title"></h3>
+                <p data-i18n="value.2.text"></p>
+              </li>
+              <li class="value reveal" style="--d:.16s">
+                <img class="value__art" src="assets/img/values/value-3.jpg" alt="" loading="lazy" decoding="async">
+                <span class="value__num mono">03</span>
+                <h3 data-i18n="value.3.title"></h3>
+                <p data-i18n="value.3.text"></p>
+              </li>
+              <li class="value reveal" style="--d:.24s">
+                <img class="value__art" src="assets/img/values/value-4.jpg" alt="" loading="lazy" decoding="async">
+                <span class="value__num mono">04</span>
+                <h3 data-i18n="value.4.title"></h3>
+                <p data-i18n="value.4.text"></p>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <div class="stack">
+
+      <!-- ============ BRAND CAROUSEL ============ -->
+      <section class="strip" id="portfolio">
+        <div class="container section-head section-head--row">
+          <div>
+            <p class="label" data-i18n="carousel.label">Պորտֆել</p>
+            <h2 class="h2 h2--md" data-i18n="carousel.title">Բրենդներ, որոնք ներկայացնում ենք</h2>
+          </div>
+          <p class="drag-hint mono" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>
+            <span data-i18n="carousel.hint">Քաշեք</span>
+          </p>
+        </div>
+
+        <div class="carousel" data-carousel>
+          <div class="carousel__track">
+            <!-- portfolio:start -->
+            <a class="bcard" href="#brand-weber-mt" style="--card-bg:#FFFFFF" draggable="false">
+              <div class="bcard__art" aria-hidden="true">
+                <img class="bcard__layer bcard__layer--photo" src="assets/img/portfolio/weber-mt/weber1.1.jpg" style="left:10.278%;top:15.208%;width:86.389%;height:79.375%" alt="" draggable="false" loading="lazy" decoding="async">
+                <span class="bcard__plate" style="left:3.611%;top:1.458%;width:66.944%;height:15.417%;--plate:#313436"></span>
+                <img class="bcard__layer bcard__layer--logo" src="assets/img/portfolio/weber-mt/webermt-logo.png" style="left:5%;top:2.5%;width:64.167%;height:13.125%" alt="" draggable="false" loading="lazy" decoding="async">
+              </div>
+              <h3 class="sr-only">Weber MT</h3>
+              <span class="bcard__num mono">01 · DE</span>
+              <p class="bcard__meta mono"><span data-i18n="country.de"></span> · <span data-i18n="cat.compaction"></span></p>
+              <span class="bcard__go" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+            </a>
+            <a class="bcard" href="#brand-imer" style="--card-bg:#FFFFFF" draggable="false">
+              <div class="bcard__art" aria-hidden="true">
+                <img class="bcard__layer bcard__layer--photo" src="assets/img/portfolio/imer/imer2.webp" style="left:1.111%;top:13.333%;width:100%;height:92.917%" alt="" draggable="false" loading="lazy" decoding="async">
+                <span class="bcard__plate" style="left:2.778%;top:1.25%;width:66.944%;height:15.417%;--plate:#EFEFEF"></span>
+                <img class="bcard__layer bcard__layer--logo" src="assets/img/portfolio/imer/imer-logo.png" style="left:13.056%;top:2.292%;width:44.722%;height:13.333%" alt="" draggable="false" loading="lazy" decoding="async">
+              </div>
+              <h3 class="sr-only">IMER</h3>
+              <span class="bcard__num mono">02 · IT</span>
+              <p class="bcard__meta mono"><span data-i18n="country.it"></span> · <span data-i18n="cat.access"></span></p>
+              <span class="bcard__go" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+            </a>
+            <a class="bcard bcard--tint" href="#brand-enar" draggable="false">
+              <div class="bcard__art" aria-hidden="true">
+                <span class="bcard__plate" style="left:2.778%;top:1.25%;width:66.944%;height:15.417%;--plate:#313436"></span>
+                <img class="bcard__layer bcard__layer--logo bcard__layer--contain" src="assets/img/portfolio/enar/enar-logo.svg" style="left:2.778%;top:2.708%;width:65.556%;height:12.5%" alt="" draggable="false" loading="lazy" decoding="async">
+                <img class="bcard__layer bcard__layer--photo" src="assets/img/portfolio/enar/enar3.webp" style="left:16.944%;top:10.208%;width:78.889%;height:59.167%" alt="" draggable="false" loading="lazy" decoding="async">
+                <img class="bcard__layer bcard__layer--photo" src="assets/img/portfolio/enar/enar4.webp" style="left:0.556%;top:34.583%;width:97.222%;height:72.917%" alt="" draggable="false" loading="lazy" decoding="async">
+              </div>
+              <h3 class="sr-only">ENAR</h3>
+              <span class="bcard__num mono">03 · ES</span>
+              <p class="bcard__meta mono"><span data-i18n="country.es"></span> · <span data-i18n="cat.concrete"></span></p>
+              <span class="bcard__go" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+            </a>
+            <a class="bcard" href="#brand-kern-deudiam" style="--card-bg:#FFFFFF" draggable="false">
+              <div class="bcard__art" aria-hidden="true">
+                <span class="bcard__plate" style="left:2.222%;top:1.667%;width:66.944%;height:15.417%;--plate:#FFFFFF"></span>
+                <span class="bcard__layer bcard__layer--logo bcard__crop" style="left:10.556%;top:3.125%;width:47.778%;height:12.5%"><img src="assets/img/portfolio/kern-deudiam/kern-logo.webp" style="width:100.258%;height:161.667%;left:-0.129%;top:-31.667%" alt="" draggable="false" loading="lazy" decoding="async"></span>
+                <img class="bcard__layer bcard__layer--photo" src="assets/img/portfolio/kern-deudiam/kern6.jpg" style="left:25.556%;top:21.875%;width:64.722%;height:77.083%" alt="" draggable="false" loading="lazy" decoding="async">
+                <img class="bcard__layer bcard__layer--photo" src="assets/img/portfolio/kern-deudiam/kern7.webp" style="left:-16.111%;top:29.167%;width:59.722%;height:44.792%" alt="" draggable="false" loading="lazy" decoding="async">
+              </div>
+              <h3 class="sr-only">Kern-Deudiam</h3>
+              <span class="bcard__num mono">04 · DE</span>
+              <p class="bcard__meta mono"><span data-i18n="country.de"></span> · <span data-i18n="cat.diamond"></span></p>
+              <span class="bcard__go" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+            </a>
+            <a class="bcard bcard--tint" href="#brand-ofmer" draggable="false">
+              <div class="bcard__art" aria-hidden="true">
+                <span class="bcard__plate" style="left:2.778%;top:1.25%;width:66.944%;height:15.417%;--plate:#313436"></span>
+                <img class="bcard__layer bcard__layer--photo" src="assets/img/portfolio/ofmer/ofmer3.webp" style="left:4.167%;top:18.125%;width:116.111%;height:87.292%" alt="" draggable="false" loading="lazy" decoding="async">
+                <img class="bcard__layer bcard__layer--logo" src="assets/img/portfolio/ofmer/ofmer-logo.webp" style="left:7.5%;top:4.583%;width:60.833%;height:8.542%" alt="" draggable="false" loading="lazy" decoding="async">
+              </div>
+              <h3 class="sr-only">Ofmer</h3>
+              <span class="bcard__num mono">05 · IT</span>
+              <p class="bcard__meta mono"><span data-i18n="country.it"></span> · <span data-i18n="cat.rebar"></span></p>
+              <span class="bcard__go" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+            </a>
+            <a class="bcard" href="#brand-geda" style="--card-bg:#FFFFFF" draggable="false">
+              <div class="bcard__art" aria-hidden="true">
+                <img class="bcard__layer bcard__layer--photo" src="assets/img/portfolio/geda/geda5.jpg" style="left:5%;top:24.792%;width:101.389%;height:76.042%" alt="" draggable="false" loading="lazy" decoding="async">
+                <span class="bcard__plate" style="left:2.778%;top:1.25%;width:66.944%;height:15.417%;--plate:#FFFFFF"></span>
+                <img class="bcard__layer bcard__layer--logo" src="assets/img/portfolio/geda/geda-logo.png" style="left:15%;top:3.333%;width:42.5%;height:11.042%" alt="" draggable="false" loading="lazy" decoding="async">
+              </div>
+              <h3 class="sr-only">Geda</h3>
+              <span class="bcard__num mono">06 · DE</span>
+              <p class="bcard__meta mono"><span data-i18n="country.de"></span> · <span data-i18n="cat.lifting"></span></p>
+              <span class="bcard__go" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+            </a>
+            <a class="bcard" href="#brand-dynapac" style="--card-bg:#FFFFFF" draggable="false">
+              <div class="bcard__art" aria-hidden="true">
+                <span class="bcard__plate" style="left:2.222%;top:1.667%;width:66.944%;height:15.417%;--plate:#9A2A20"></span>
+                <img class="bcard__layer bcard__layer--logo" src="assets/img/portfolio/dynapac/dynapac-logo.png" style="left:2.778%;top:3.125%;width:66.111%;height:12.5%" alt="" draggable="false" loading="lazy" decoding="async">
+                <img class="bcard__layer bcard__layer--photo" src="assets/img/portfolio/dynapac/dynapac6.jpg" style="left:-18.333%;top:28.333%;width:131.667%;height:65.417%" alt="" draggable="false" loading="lazy" decoding="async">
+              </div>
+              <h3 class="sr-only">Dynapac</h3>
+              <span class="bcard__num mono">07 · SE</span>
+              <p class="bcard__meta mono"><span data-i18n="country.se"></span> · <span data-i18n="cat.light"></span></p>
+              <span class="bcard__go" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+            </a>
+            <a class="bcard" href="#brand-hatz" style="--card-bg:#E5E5E5" draggable="false">
+              <div class="bcard__art" aria-hidden="true">
+                <img class="bcard__layer bcard__layer--photo" src="assets/img/portfolio/hatz/hatz4.webp" style="left:-16.389%;top:33.542%;width:141.944%;height:66.458%" alt="" draggable="false" loading="lazy" decoding="async">
+                <span class="bcard__plate" style="left:2.222%;top:1.875%;width:66.944%;height:15.417%;--plate:#DA281B"></span>
+                <span class="bcard__layer bcard__layer--logo bcard__crop" style="left:12.222%;top:2.708%;width:46.944%;height:12.708%"><img src="assets/img/portfolio/hatz/hatz-logo.webp" style="width:100%;height:249.484%;left:0%;top:-121.508%" alt="" draggable="false" loading="lazy" decoding="async"></span>
+              </div>
+              <h3 class="sr-only">Hatz</h3>
+              <span class="bcard__num mono">08 · DE</span>
+              <p class="bcard__meta mono"><span data-i18n="country.de"></span> · <span data-i18n="cat.power"></span></p>
+              <span class="bcard__go" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+            </a>
+            <a class="bcard" href="#brand-yanmar" style="--card-bg:#FFFFFF" draggable="false">
+              <div class="bcard__art" aria-hidden="true">
+                <img class="bcard__layer bcard__layer--photo" src="assets/img/portfolio/yanmar/yanmar12.webp" style="left:1.111%;top:35.833%;width:97.222%;height:46.667%" alt="" draggable="false" loading="lazy" decoding="async">
+                <span class="bcard__plate" style="left:2.222%;top:1.667%;width:66.944%;height:15.417%;--plate:#FFFFFF"></span>
+                <span class="bcard__layer bcard__layer--logo bcard__crop" style="left:2.778%;top:3.75%;width:63.889%;height:11.667%"><img src="assets/img/portfolio/yanmar/yanmar-logo.png" style="width:110.217%;height:100%;left:-3.043%;top:0%" alt="" draggable="false" loading="lazy" decoding="async"></span>
+              </div>
+              <h3 class="sr-only">Yanmar</h3>
+              <span class="bcard__num mono">09 · JP</span>
+              <p class="bcard__meta mono"><span data-i18n="country.jp"></span> · <span data-i18n="cat.compact"></span></p>
+              <span class="bcard__go" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+            </a>
+            <!-- portfolio:end -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ INDUSTRIES ============ -->
+      <section class="industries section section--deep" id="industries">
+        <div class="container section-head">
+          <div>
+            <p class="label reveal" data-i18n="ind.label"></p>
+            <h2 class="h2 reveal" data-i18n="ind.title"></h2>
+          </div>
+          <p class="section-head__text reveal" data-i18n="ind.text"></p>
+        </div>
+
+        <div class="container ind__grid">
+          <div class="ind__side">
+            <div class="ind__list" role="tablist" aria-orientation="vertical">
+              <button type="button" class="ind__item is-active" role="tab" aria-selected="true" aria-controls="indPanel" data-ind="1"><span class="mono">01</span><span class="ind__name" data-i18n="ind.1.name"></span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+              <button type="button" class="ind__item" role="tab" aria-selected="false" aria-controls="indPanel" tabindex="-1" data-ind="2"><span class="mono">02</span><span class="ind__name" data-i18n="ind.2.name"></span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+              <button type="button" class="ind__item" role="tab" aria-selected="false" aria-controls="indPanel" tabindex="-1" data-ind="3"><span class="mono">03</span><span class="ind__name" data-i18n="ind.3.name"></span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+              <button type="button" class="ind__item" role="tab" aria-selected="false" aria-controls="indPanel" tabindex="-1" data-ind="4"><span class="mono">04</span><span class="ind__name" data-i18n="ind.4.name"></span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            </div>
+
+            <div class="ind__detail" id="indPanel" role="tabpanel">
+              <p class="ind__desc" data-i18n="ind.1.text"></p>
+              <p class="ind__tags-label mono" data-i18n="ind.brands"></p>
+              <ul class="tags" data-ind-tags></ul>
+              <a class="btn btn--copper" href="#contact"><span data-i18n="ind.cta"></span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+
+          <div class="ind__gallery" data-ind-gallery>
+            <div class="ph ph--steel g1"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-ind-num>01</span>&nbsp;· <span data-i18n="ph"></span> 1/4</span></div>
+            <div class="ph ph--sand g2"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-ind-num>01</span>&nbsp;· <span data-i18n="ph"></span> 2/4</span></div>
+            <div class="ph ph--concrete g3"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-ind-num>01</span>&nbsp;· 3/4</span></div>
+            <div class="ph ph--paper g4"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-ind-num>01</span>&nbsp;· 4/4</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ BRANDS / SERVICES ============ -->
+      <section class="brands section" id="brands">
+        <div class="container section-head">
+          <div>
+            <p class="label reveal" data-i18n="brands.label"></p>
+            <h2 class="h2 reveal" data-i18n="brands.title"></h2>
+          </div>
+          <p class="section-head__text reveal" data-i18n="brands.text"></p>
+        </div>
+
+        <div class="container bento">
+          <!-- brands:start -->
+          <a class="pcard pcard--wide reveal" id="brand-weber-mt" href="https://katalog.webermt.com/FlipBook_WeberMT-Katalog2025-GB/" target="_blank" rel="noopener noreferrer">
+            <div class="pcard__top mono"><span>01 · <span data-i18n="country.de"></span></span><span class="pcard__go"><span data-i18n="brands.more"></span><span class="pcard__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span></div>
+            <div class="pcard__media collage collage--wide" style="aspect-ratio:704 / 440" data-photo="assets/img/photos/brands/weber-mt.webp" aria-hidden="true">
+              <span class="collage__tile collage__tile--ph" style="left:0%;top:0%;width:60.795%;height:100%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 1</span></span>
+              <span class="collage__tile collage__tile--ph" style="left:61.932%;top:0%;width:38.068%;height:49.091%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 2</span></span>
+              <span class="collage__tile collage__tile--ph" style="left:61.932%;top:50.909%;width:38.068%;height:49.091%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 3</span></span>
+            </div>
+            <div class="pcard__body">
+              <p class="pcard__cat mono" data-i18n="cat.compaction"></p>
+              <h3 class="pcard__name">Weber MT</h3>
+              <ul class="pcard__list"><li data-i18n="weber.p1"></li><li data-i18n="weber.p2"></li><li data-i18n="weber.p3"></li></ul>
+            </div>
+          </a>
+          <a class="pcard reveal" id="brand-imer" href="https://www.imergroup.com/en/products/" target="_blank" rel="noopener noreferrer" style="--d:.1s">
+            <div class="pcard__top mono"><span>02 · <span data-i18n="country.it"></span></span><span class="pcard__go"><span data-i18n="brands.more"></span><span class="pcard__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span></div>
+            <div class="pcard__media collage collage--narrow" style="aspect-ratio:480 / 440" data-photo="assets/img/photos/brands/imer.webp" aria-hidden="true">
+              <span class="collage__tile collage__tile--ph" style="left:0%;top:0%;width:100%;height:60.909%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 1</span></span>
+              <span class="collage__tile collage__tile--ph" style="left:0%;top:62.727%;width:49.167%;height:37.273%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 2</span></span>
+              <span class="collage__tile collage__tile--ph" style="left:50.833%;top:62.727%;width:49.167%;height:37.273%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 3</span></span>
+            </div>
+            <div class="pcard__body">
+              <p class="pcard__cat mono" data-i18n="cat.access"></p>
+              <h3 class="pcard__name">IMER</h3>
+              <ul class="pcard__list"><li data-i18n="imer.p1"></li><li data-i18n="imer.p2"></li><li data-i18n="imer.p3"></li></ul>
+            </div>
+          </a>
+          <a class="pcard reveal" id="brand-enar" href="https://www.enargroup.com/eme/range/vibration/products" target="_blank" rel="noopener noreferrer">
+            <div class="pcard__top mono"><span>03 · <span data-i18n="country.es"></span></span><span class="pcard__go"><span data-i18n="brands.more"></span><span class="pcard__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span></div>
+            <div class="pcard__media collage collage--narrow" style="aspect-ratio:480 / 440" data-photo="assets/img/photos/brands/enar.webp" aria-hidden="true">
+              <span class="collage__tile collage__tile--ph" style="left:0%;top:0%;width:100%;height:60.909%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 1</span></span>
+              <span class="collage__tile collage__tile--ph" style="left:0%;top:62.727%;width:49.167%;height:37.273%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 2</span></span>
+              <span class="collage__tile collage__tile--ph" style="left:50.833%;top:62.727%;width:49.167%;height:37.273%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 3</span></span>
+            </div>
+            <div class="pcard__body">
+              <p class="pcard__cat mono" data-i18n="cat.concrete"></p>
+              <h3 class="pcard__name">ENAR</h3>
+              <ul class="pcard__list"><li data-i18n="enar.p1"></li><li data-i18n="enar.p2"></li><li data-i18n="enar.p3"></li></ul>
+            </div>
+          </a>
+          <a class="pcard pcard--wide reveal" id="brand-kern-deudiam" href="https://kern-deudiam.com/catalogues/kern-deudiam-diamond-tools-dubai/" target="_blank" rel="noopener noreferrer" style="--d:.1s">
+            <div class="pcard__top mono"><span>04 · <span data-i18n="country.de"></span></span><span class="pcard__go"><span data-i18n="brands.more"></span><span class="pcard__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span></div>
+            <div class="pcard__media collage collage--wide" style="aspect-ratio:704 / 440" data-photo="assets/img/photos/brands/kern-deudiam.webp" aria-hidden="true">
+              <span class="collage__tile collage__tile--ph" style="left:0%;top:0%;width:60.795%;height:100%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 1</span></span>
+              <span class="collage__tile collage__tile--ph" style="left:61.932%;top:0%;width:38.068%;height:49.091%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 2</span></span>
+              <span class="collage__tile collage__tile--ph" style="left:61.932%;top:50.909%;width:38.068%;height:49.091%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 3</span></span>
+            </div>
+            <div class="pcard__body">
+              <p class="pcard__cat mono" data-i18n="cat.diamond"></p>
+              <h3 class="pcard__name">Kern-Deudiam</h3>
+              <ul class="pcard__list"><li data-i18n="kern.p1"></li><li data-i18n="kern.p2"></li><li data-i18n="kern.p3"></li></ul>
+            </div>
+          </a>
+          <a class="pcard pcard--wide reveal" id="brand-ofmer" href="https://www.ofmer.com/en/products-portfolio/" target="_blank" rel="noopener noreferrer">
+            <div class="pcard__top mono"><span>05 · <span data-i18n="country.it"></span></span><span class="pcard__go"><span data-i18n="brands.more"></span><span class="pcard__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span></div>
+            <div class="pcard__media collage collage--wide" style="aspect-ratio:704 / 440" data-photo="assets/img/photos/brands/ofmer.webp" aria-hidden="true">
+              <span class="collage__tile collage__tile--ph" style="left:0%;top:0%;width:60.795%;height:100%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 1</span></span>
+              <span class="collage__tile collage__tile--ph" style="left:61.932%;top:0%;width:38.068%;height:49.091%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 2</span></span>
+              <span class="collage__tile collage__tile--ph" style="left:61.932%;top:50.909%;width:38.068%;height:49.091%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 3</span></span>
+            </div>
+            <div class="pcard__body">
+              <p class="pcard__cat mono" data-i18n="cat.rebar"></p>
+              <h3 class="pcard__name">Ofmer</h3>
+              <ul class="pcard__list"><li data-i18n="ofmer.p1"></li><li data-i18n="ofmer.p2"></li><li data-i18n="ofmer.p3"></li></ul>
+            </div>
+          </a>
+          <a class="pcard reveal" id="brand-geda" href="https://www.geda.de/en/products/catalogue/" target="_blank" rel="noopener noreferrer" style="--d:.1s">
+            <div class="pcard__top mono"><span>06 · <span data-i18n="country.de"></span></span><span class="pcard__go"><span data-i18n="brands.more"></span><span class="pcard__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span></div>
+            <div class="pcard__media collage collage--narrow" style="aspect-ratio:480 / 440" data-photo="assets/img/photos/brands/geda.webp" aria-hidden="true">
+              <span class="collage__tile collage__tile--ph" style="left:0%;top:0%;width:100%;height:60.909%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 1</span></span>
+              <span class="collage__tile collage__tile--ph" style="left:0%;top:62.727%;width:49.167%;height:37.273%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 2</span></span>
+              <span class="collage__tile collage__tile--ph" style="left:50.833%;top:62.727%;width:49.167%;height:37.273%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 3</span></span>
+            </div>
+            <div class="pcard__body">
+              <p class="pcard__cat mono" data-i18n="cat.lifting"></p>
+              <h3 class="pcard__name">Geda</h3>
+              <ul class="pcard__list"><li data-i18n="geda.p1"></li><li data-i18n="geda.p2"></li><li data-i18n="geda.p3"></li></ul>
+            </div>
+          </a>
+          <a class="pcard reveal" id="brand-dynapac" href="https://dynapac.com/en/products/light-equipment?tab=products" target="_blank" rel="noopener noreferrer">
+            <div class="pcard__top mono"><span>07 · <span data-i18n="country.se"></span></span><span class="pcard__go"><span data-i18n="brands.more"></span><span class="pcard__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span></div>
+            <div class="pcard__media collage collage--narrow" style="aspect-ratio:480 / 440" data-photo="assets/img/photos/brands/dynapac.webp" aria-hidden="true">
+              <span class="collage__tile collage__tile--ph" style="left:0%;top:0%;width:100%;height:60.909%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 1</span></span>
+              <span class="collage__tile collage__tile--ph" style="left:0%;top:62.727%;width:49.167%;height:37.273%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 2</span></span>
+              <span class="collage__tile collage__tile--ph" style="left:50.833%;top:62.727%;width:49.167%;height:37.273%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 3</span></span>
+            </div>
+            <div class="pcard__body">
+              <p class="pcard__cat mono" data-i18n="cat.light"></p>
+              <h3 class="pcard__name">Dynapac</h3>
+              <ul class="pcard__list"><li data-i18n="dynapac.p1"></li><li data-i18n="dynapac.p2"></li><li data-i18n="dynapac.p3"></li></ul>
+            </div>
+          </a>
+          <a class="pcard pcard--wide reveal" id="brand-hatz" href="https://hatz.com/en-global/products" target="_blank" rel="noopener noreferrer" style="--d:.1s">
+            <div class="pcard__top mono"><span>08 · <span data-i18n="country.de"></span></span><span class="pcard__go"><span data-i18n="brands.more"></span><span class="pcard__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span></div>
+            <div class="pcard__media collage collage--wide" style="aspect-ratio:704 / 440" data-photo="assets/img/photos/brands/hatz.webp" aria-hidden="true">
+              <span class="collage__tile collage__tile--ph" style="left:0%;top:0%;width:60.795%;height:100%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 1</span></span>
+              <span class="collage__tile collage__tile--ph" style="left:61.932%;top:0%;width:38.068%;height:49.091%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 2</span></span>
+              <span class="collage__tile collage__tile--ph" style="left:61.932%;top:50.909%;width:38.068%;height:49.091%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 3</span></span>
+            </div>
+            <div class="pcard__body">
+              <p class="pcard__cat mono" data-i18n="cat.power"></p>
+              <h3 class="pcard__name">Hatz</h3>
+              <ul class="pcard__list"><li data-i18n="hatz.p1"></li><li data-i18n="hatz.p2"></li><li data-i18n="hatz.p3"></li></ul>
+            </div>
+          </a>
+          <a class="pcard pcard--full reveal" id="brand-yanmar" href="https://www.yanmar.com/global/engine/products/diesel/aircooled/" target="_blank" rel="noopener noreferrer">
+            <div class="pcard__top mono"><span>09 · <span data-i18n="country.jp"></span></span><span class="pcard__go"><span data-i18n="brands.more"></span><span class="pcard__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span></div>
+            <div class="pcard__media collage collage--full" style="aspect-ratio:1264 / 440" data-photo="assets/img/photos/brands/yanmar.webp" aria-hidden="true">
+              <span class="collage__tile collage__tile--ph" style="left:0%;top:0%;width:49.051%;height:100%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 1</span></span>
+              <span class="collage__tile collage__tile--ph" style="left:49.684%;top:0%;width:24.842%;height:100%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 2</span></span>
+              <span class="collage__tile collage__tile--ph" style="left:75.158%;top:0%;width:24.842%;height:100%;background:#F3F2F0"><span class="ph__label"><svg viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><path d="M9 10h6v6H9z"/></svg><span data-i18n="ph"></span> 3</span></span>
+            </div>
+            <div class="pcard__body">
+              <p class="pcard__cat mono" data-i18n="cat.compact"></p>
+              <h3 class="pcard__name">Yanmar</h3>
+              <ul class="pcard__list"><li data-i18n="yanmar.p1"></li><li data-i18n="yanmar.p2"></li><li data-i18n="yanmar.p3"></li></ul>
+            </div>
+          </a>
+          <!-- brands:end -->
+        </div>
+      </section>
+
+      <!-- ============ FAQ ============ -->
+      <section class="faq section" id="faq">
+        <div class="container faq__grid">
+          <div class="faq__head">
+            <span class="faq__qmark" aria-hidden="true">?</span>
+            <p class="label reveal" data-i18n="faq.label"></p>
+            <h2 class="h2 reveal" data-i18n="faq.title"></h2>
+            <p class="section-head__text reveal" data-i18n="faq.text"></p>
+            <p class="faq__more reveal"><span data-i18n="faq.more"></span> <a class="link" href="#contact"><span data-i18n="faq.moreLink"></span> →</a></p>
+          </div>
+
+          <div class="faq__list">
+            <div class="faq__item is-open reveal">
+              <h3><button type="button" class="faq__q" id="faqQ1" aria-expanded="true" aria-controls="faqA1"><span class="mono">01</span><span data-i18n="faq.1.q"></span><span class="faq__icon" aria-hidden="true"></span></button></h3>
+              <div class="faq__a" id="faqA1" role="region" aria-labelledby="faqQ1"><div><p data-i18n="faq.1.a"></p></div></div>
+            </div>
+            <div class="faq__item reveal">
+              <h3><button type="button" class="faq__q" id="faqQ2" aria-expanded="false" aria-controls="faqA2"><span class="mono">02</span><span data-i18n="faq.2.q"></span><span class="faq__icon" aria-hidden="true"></span></button></h3>
+              <div class="faq__a" id="faqA2" role="region" aria-labelledby="faqQ2"><div><p data-i18n="faq.2.a"></p></div></div>
+            </div>
+            <div class="faq__item reveal">
+              <h3><button type="button" class="faq__q" id="faqQ3" aria-expanded="false" aria-controls="faqA3"><span class="mono">03</span><span data-i18n="faq.3.q"></span><span class="faq__icon" aria-hidden="true"></span></button></h3>
+              <div class="faq__a" id="faqA3" role="region" aria-labelledby="faqQ3"><div><p data-i18n="faq.3.a"></p></div></div>
+            </div>
+            <div class="faq__item reveal">
+              <h3><button type="button" class="faq__q" id="faqQ4" aria-expanded="false" aria-controls="faqA4"><span class="mono">04</span><span data-i18n="faq.4.q"></span><span class="faq__icon" aria-hidden="true"></span></button></h3>
+              <div class="faq__a" id="faqA4" role="region" aria-labelledby="faqQ4"><div><p data-i18n="faq.4.a"></p></div></div>
+            </div>
+            <div class="faq__item reveal">
+              <h3><button type="button" class="faq__q" id="faqQ5" aria-expanded="false" aria-controls="faqA5"><span class="mono">05</span><span data-i18n="faq.5.q"></span><span class="faq__icon" aria-hidden="true"></span></button></h3>
+              <div class="faq__a" id="faqA5" role="region" aria-labelledby="faqQ5"><div><p data-i18n="faq.5.a"></p></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section class="contact section section--sand" id="contact">
+        <!-- Точечная поверхность (порт DottedSurface, без three.js) — assets/js/dotted-surface.js -->
+        <div class="contact__dots" aria-hidden="true" data-dotted-surface></div>
+        <div class="container contact__grid">
+          <div class="contact__info">
+            <p class="label reveal" data-i18n="contact.label"></p>
+            <h2 class="h2 reveal" data-i18n="contact.title"></h2>
+            <p class="lead reveal" data-i18n="contact.text"></p>
+            <ul class="contact__list reveal">
+              <li><span class="mono"><span data-i18n="contact.phoneLabel"></span> / WhatsApp</span><a href="tel:+37455105500">+374 55 105500</a></li>
+              <li><span class="mono" data-i18n="contact.emailLabel"></span><a href="mailto:info@bayern.am">info@bayern.am</a></li>
+              <li><span class="mono" data-i18n="contact.addrLabel"></span><span data-i18n="contact.addr"></span></li>
+            </ul>
+            <!-- Google Maps: карточка компании Bayern LLC (cid — её идентификатор в Google Картах,
+                 40.2086683, 44.5305817). Другое место — взять cid из ссылки на карточку
+                 (…!1s0x…:0xHEX… → перевести вторую часть из hex в десятичное). -->
+            <div class="contact__map reveal">
+              <div class="contact__map-frame">
+                <iframe
+                  src="https://maps.google.com/maps?cid=15587027588504665339&amp;z=17&amp;output=embed"
+                  title="BAYERN — Ереван, пр. Азатутян 24/15"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  allowfullscreen></iframe>
+              </div>
+              <a class="contact__map-link mono" href="https://maps.google.com/?cid=15587027588504665339" target="_blank" rel="noopener noreferrer"><span data-i18n="contact.mapLink"></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+            </div>
+          </div>
+
+          <div class="contact__card reveal">
+            <form class="form" id="contactForm" novalidate>
+              <input type="hidden" name="type" value="client">
+              <div class="form__grid">
+                <label class="field">
+                  <span class="field__label mono" data-req data-i18n="contact.name"></span>
+                  <input type="text" name="name" autocomplete="name" required>
+                  <span class="field__error mono"></span>
+                </label>
+                <label class="field">
+                  <span class="field__label mono" data-i18n="contact.company"></span>
+                  <input type="text" name="company" autocomplete="organization">
+                  <span class="field__error mono"></span>
+                </label>
+                <label class="field">
+                  <span class="field__label mono" data-req data-i18n="contact.phone"></span>
+                  <input type="tel" name="phone" autocomplete="tel" inputmode="tel" required>
+                  <span class="field__error mono"></span>
+                </label>
+                <label class="field">
+                  <span class="field__label mono" data-req data-i18n="contact.email"></span>
+                  <input type="email" name="email" autocomplete="email" required>
+                  <span class="field__error mono"></span>
+                </label>
+
+                <label class="field field--full">
+                  <span class="field__label mono" data-i18n="contact.brand"></span>
+                  <select name="brand">
+                    <option value="" data-i18n="contact.brandAny"></option>
+                    <option>Weber MT</option>
+                    <option>IMER</option>
+                    <option>ENAR</option>
+                    <option>Kern-Deudiam</option>
+                    <option>Ofmer</option>
+                    <option>Geda</option>
+                    <option>Dynapac</option>
+                    <option>Hatz</option>
+                    <option>Yanmar</option>
+                  </select>
+                </label>
+                <label class="field field--full">
+                  <span class="field__label mono" data-i18n="contact.message"></span>
+                  <textarea name="message" rows="4" data-i18n-ph="contact.msgClient"></textarea>
+                </label>
+
+                <label class="field field--hp" aria-hidden="true">
+                  <span>Не заполняйте это поле</span>
+                  <input type="text" name="website" tabindex="-1" autocomplete="off">
+                </label>
+
+                <label class="check field field--full">
+                  <input type="checkbox" name="consent" required>
+                  <span data-i18n="contact.consent"></span>
+                  <span class="field__error mono"></span>
+                </label>
+              </div>
+
+              <button class="btn btn--copper btn--lg" type="submit"><span data-i18n="contact.submit"></span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+              <p class="form__note mono" role="alert" hidden></p>
+            </form>
+
+            <div class="form__success" hidden>
+              <span class="form__success-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+              <h3 data-i18n="contact.successTitle"></h3>
+              <p data-i18n="contact.successText"></p>
+              <button type="button" class="link" data-form-again><span data-i18n="contact.again"></span> →</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FOOTER ============ -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__top">
+            <div class="footer__col footer__col--lead">
+              <p data-i18n="footer.tagline"></p>
+              <div class="footer__brandline">
+                <span class="mark" aria-hidden="true"></span>
+                <div class="socials">
+                  <a class="social" href="https://www.facebook.com/profile.php?id=61562184064613" target="_blank" rel="noopener" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                  </a>
+                  <a class="social" href="https://www.instagram.com/bayernarmenia/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></svg>
+                  </a>
+                  <a class="social" href="https://wa.me/37455105500" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 8.6c0 3.3 3 6.4 6.4 6.4l1.1-1.4-2-1-.9.8a4.6 4.6 0 0 1-2.4-2.4l.8-.9-1-2z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="footer__col">
+              <h4 class="mono" data-i18n="footer.nav"></h4>
+              <a href="#about" data-i18n="nav.about"></a>
+              <a href="#industries" data-i18n="nav.industries"></a>
+              <a href="#brands" data-i18n="nav.brands"></a>
+              <a href="#faq" data-i18n="nav.faq"></a>
+              <a href="#contact" data-i18n="nav.contact"></a>
+            </div>
+            <div class="footer__col footer__col--brands">
+              <h4 class="mono" data-i18n="footer.brands"></h4>
+              <a href="https://katalog.webermt.com/FlipBook_WeberMT-Katalog2025-GB/" target="_blank" rel="noopener noreferrer">Weber MT</a>
+              <a href="https://dynapac.com/en/products/light-equipment?tab=products" target="_blank" rel="noopener noreferrer">Dynapac</a>
+              <a href="https://www.yanmar.com/global/engine/products/diesel/aircooled/" target="_blank" rel="noopener noreferrer">Yanmar</a>
+              <a href="https://www.imergroup.com/en/products/" target="_blank" rel="noopener noreferrer">IMER</a>
+              <a href="https://hatz.com/en-global/products" target="_blank" rel="noopener noreferrer">Hatz</a>
+            </div>
+            <div class="footer__col footer__col--contacts">
+              <h4 class="mono" data-i18n="footer.contacts"></h4>
+              <a href="tel:+37455105500">+374 55 105500</a>
+              <a href="mailto:info@bayern.am">info@bayern.am</a>
+              <span data-i18n="contact.addr"></span>
+            </div>
+            <img class="footer__logo" src="assets/img/logo-white.png" width="2877" height="749" alt="BAYERN — Quality First" loading="lazy">
+          </div>
+
+          <div class="footer__bottom mono">
+            <span data-i18n="footer.endorse"></span>
+            <span data-i18n="footer.rights"></span>
+            <a href="#top" data-i18n="footer.top"></a>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </main>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/logo-shape.js"></script>
+  <script src="assets/js/glyph-portal.js"></script>
+  <script src="assets/js/dotted-surface.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
