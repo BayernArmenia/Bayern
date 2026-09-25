@@ -10,8 +10,10 @@
   <script>document.documentElement.classList.add('js')</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+Armenian:wdth,wght@62.5..100,400..700&display=swap">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Шрифты не блокируют первую отрисовку: пока грузятся, текст показан системным шрифтом (display=swap) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+Armenian:wdth,wght@62.5..100,400..700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+Armenian:wdth,wght@62.5..100,400..700&display=swap"></noscript>
+  <link rel="stylesheet" href="assets/css/style.css?v=2">
 </head>
 <body data-page="home">
 
@@ -89,7 +91,7 @@
         </label>
 
         <!-- Без JS: обычный логотип -->
-        <img data-gp-fallback src="assets/img/logo-white.png" width="2877" height="749" alt="">
+        <img data-gp-fallback src="assets/img/logo-white.png" width="2877" height="749" alt="" loading="lazy">
 
         <div data-gp-front>
           <div class="container hero__inner">
@@ -675,10 +677,10 @@
     </div>
   </main>
 
-  <script src="assets/js/i18n.js"></script>
-  <script src="assets/js/logo-shape.js"></script>
-  <script src="assets/js/glyph-portal.js"></script>
-  <script src="assets/js/dotted-surface.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/logo-shape.js" defer></script>
+  <script src="assets/js/glyph-portal.js" defer></script>
+  <script src="assets/js/dotted-surface.js?v=2" defer></script>
+  <script src="assets/js/main.js?v=2" defer></script>
 </body>
 </html>

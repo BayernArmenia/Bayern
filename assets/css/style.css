@@ -535,6 +535,9 @@ html:not(.js) .hero-gp [data-gp-fallback] { display: block; }
    ========================================================= */
 
 .section { padding-block: clamp(80px, 10vw, 160px); }
+/* Секции ниже первого экрана браузер не раскладывает, пока до них не докрутили:
+   первая отрисовка на телефоне быстрее. 900px — примерная высота до первого показа */
+.section, .strip, .footer { content-visibility: auto; contain-intrinsic-size: auto 900px; }
 .section--deep { background: var(--deep); color: #fff; }
 .section--deep .h2 { color: #fff; }
 .section--sand { background: var(--sand); }

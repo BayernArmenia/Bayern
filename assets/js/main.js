@@ -173,11 +173,16 @@
     var hovered = false, dragging = false, visible = true, focused = false;
     var startX = 0, startPos = 0, moved = 0;
 
+    // offsetLeft заставляет браузер разложить всю страницу, поэтому меряем,
+    // только когда карусель впервые видна, а не до первой отрисовки
+    var measured = false;
     function measure() {
       var first = track.children[0];
       var firstClone = track.children[originals.length];
       setWidth = firstClone.offsetLeft - first.offsetLeft;
+      measured = true;
     }
+    function remeasure() { if (measured) measure(); }
 
     function wrap() {
       if (setWidth <= 0) return;
@@ -230,13 +235,17 @@
     root.addEventListener('dragstart', function (e) { e.preventDefault(); });
 
     if ('IntersectionObserver' in window) {
-      new IntersectionObserver(function (entries) { visible = entries[0].isIntersecting; }).observe(root);
+      new IntersectionObserver(function (entries) {
+        visible = entries[0].isIntersecting;
+        if (visible && !measured) measure();
+      }).observe(root);
+    } else {
+      measure();
     }
 
-    measure();
-    window.addEventListener('resize', measure);
-    document.addEventListener('langchange', measure);
-    if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+    window.addEventListener('resize', remeasure);
+    document.addEventListener('langchange', remeasure);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(remeasure);
     requestAnimationFrame(frame);
   }
 
@@ -278,7 +287,7 @@
     var tags = $('[data-ind-tags]');
     var gallery = $('[data-ind-gallery]');
     var phs = $$('.ph', gallery);
-    var current = 0;
+    var current = 0, ready = false;
 
     function activate(n, focus) {
       if (n === current) return;
@@ -302,6 +311,7 @@
       });
       // галерея отрасли — одна картинка-коллаж из Figma; пока её нет, видны плитки-заглушки
       loadPhoto(gallery, PHOTOS + 'industries/0' + n + '.webp');
+      if (!ready) return; // при запуске анимация не нужна, а offsetWidth заставил бы разложить страницу
       gallery.classList.remove('is-swapping');
       void gallery.offsetWidth; // перезапуск анимации
       gallery.classList.add('is-swapping');
@@ -323,7 +333,7 @@
 
     current = 0;
     activate(1);
-    gallery.classList.remove('is-swapping');
+    ready = true;
   }
 
   /* ---------------- FAQ ---------------- */

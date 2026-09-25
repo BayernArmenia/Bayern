@@ -91,10 +91,10 @@
       if (visible) start(); else if (raf) { cancelAnimationFrame(raf); raf = 0; }
     }, { rootMargin: '120px 0px' });
     io.observe(container);
+    // ResizeObserver сам вызовет resize() с первым размером, без принудительной раскладки страницы
     var ro = new ResizeObserver(resize);
     ro.observe(container);
     motion.addEventListener('change', function () { draw(); start(); });
-    resize();
 
     return {
       destroy: function () {
